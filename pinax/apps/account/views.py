@@ -16,7 +16,8 @@ from django.contrib.auth.views import logout as django_logout
 
 from emailconfirmation.models import EmailAddress, EmailConfirmation
 
-association_model = models.get_model("django_openid", "Association")
+#association_model = models.get_model("django_openid", "Association")
+association_model = None
 if association_model is not None:
     from django_openid.models import UserOpenidAssociation
 
